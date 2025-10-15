@@ -18,6 +18,6 @@ Thanks for reaching out👍, have a great day.
 ---
 if you want to learn *Markdown syntax*
 click the below link👇🏻
-<br>
->[markdown] (https://github.com/Pabitraojha/Markdown-Syntax)
+
+[markdown](https://github.com/Pabitraojha/Markdown-Syntax)
 
