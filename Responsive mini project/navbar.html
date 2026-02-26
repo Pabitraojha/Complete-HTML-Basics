@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            color: white
+        }
+        .nav-container{
+            height:   80px;
+            width: 100%;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo{
+            font-size: 2rem;
+            padding-left: 5vw;
+        }
+        .nav-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-elements{
+            padding-right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5vw;
+        }
+        .nav-elements li{
+            list-style: none;
+        }
+        .nav-elements li a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            color: white;
+        }
+        .nav-elements li a:hover{
+            color: rgb(235, 163, 10);
+        }
+        .menu-toggle{
+            display: none;
+            padding-right: 40px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+        /*adding media query */
+        @media screen  and (max-width: 768px){
+            .nav-elements{
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: black;
+                width: 30%;
+                position: relative;
+                top: 0;
+                right: 0;
+                text-align: center;
+            }
+            .menu-toggle{
+                display: block;
+            }
+            .nav-elements.active{
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">My Logo</div>
+            <div class="nav-content">
+                <ul class="nav-elements">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">services</a></li>
+                </ul>
+                <div class="menu-toggle">&#9776</div>
+            </div>
+        </nav>
+    </header>
+</body>
+<script> 
+    const toggles=document.querySelector(".menu-toggle");
+    const navElements=document.querySelector(".nav-elements");
+    toggles.addEventListener("click",()=>{
+        navElements.classList.toggle('active');
+    })
+</script>
+</html>
